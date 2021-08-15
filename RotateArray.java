@@ -11,3 +11,14 @@ public class RotateArray {
         }
     }
 }
+// both are right 
+
+public static List<Integer> circularArrayRotation(List<Integer> a, int k, List<Integer> queries) {
+            Collections.rotate(a, k);
+            
+            List<Integer> result = new ArrayList<Integer>();
+            for(int i = 0 ;i<queries.size();i++){
+                result.add(a.get(queries.get(i)));
+            }
+            return result;
+        }
